@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1492834504 source:i:\codetest1\shape\main.cpp
+	<iostream>
+	<math.h>
+

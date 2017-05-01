@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1446667744 source:i:\codetest1\teacher and student\main.cpp
+	<iostream>
+
+1493129418 source:i:\codetest1\teacher\main.cpp
+	<iostream>
+	<string>
+	"teacher.h"
+	"student.h"
+
+1493129692 source:i:\codetest1\teacher\person.cpp
+	"person.h"
+	<iostream>
+	<string>
+
+1493129693 i:\codetest1\teacher\person.h
+	<string>
+
+1493129692 source:i:\codetest1\teacher\student.cpp
+	"student.h"
+	<iostream>
+
+1493129692 i:\codetest1\teacher\student.h
+	"person.h"
+
+1493129692 source:i:\codetest1\teacher\teacher.cpp
+	"teacher.h"
+	<iostream>
+
+1493129688 i:\codetest1\teacher\teacher.h
+	"person.h"
+
