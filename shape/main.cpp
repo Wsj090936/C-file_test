@@ -12,6 +12,8 @@ public:
     }
     double getx(){return x;}
     double gety(){return y;}
+    virtual void getArea() = 0;
+    virtual void getPerim() = 0;
 private:
     double x,y;
 };
@@ -26,11 +28,15 @@ public:
     }
     double getW(){return W;}
     double getH(){return H;}
-    void getArea(Rectangle P)
+    void getArea()
     {
          double area;
-        area = (P.getW()-P.getx())*(P.getH()-P.gety());
+        area = (Rectangle::getW()-Rectangle::getx())*(Rectangle::getH()-Rectangle::gety());
         cout<<"The area is:"<<area<<endl;
+    }
+    void getPerim()
+    {
+        cout<<"The perim is :"<<2*(Rectangle::getW()-Rectangle::getx())+2*(Rectangle::getH()-Rectangle::gety())<<endl;
     }
 private:
     double W,H;
@@ -46,41 +52,35 @@ public:
     }
     double getA(){return A;}
     double getB(){return B;}
-    void getArea(Circle P)
+    void getArea()
     {
-        cout<<"The area is:"<<3.14*(pow(P.getA()-P.getx(),2)+pow(P.getB()-P.gety(),2))<<endl;
+        cout<<"The area is:"<<3.14*(pow(Circle::getA()-Circle::getx(),2)+pow(Circle::getB()-Circle::gety(),2))<<endl;
+    }
+    void getPerim()
+    {
+
+        cout<<"The perim is :"<<3.14*sqrt((pow(Circle::getA()-Circle::getx(),2)+pow(Circle::getB()-Circle::gety(),2)))<<endl;
     }
 private:
     double A,B;
 };
-class Square:public Rectangle{
-public:
-    void initSquare(double x = 0,double y = 0,double Q = 0,double E = 0)
-    {
-        while(true)
-        {
-            cout<<"Please input the point"<<endl;
-            cin >>x>>y>>Q>>E;
-            if(x-y != Q-E)
-            cout<<"The point was error! Please input it again"<<endl;
-            else
-                {initRectangle(x,y,Q,E);
-                break;}
-        }//利用循环判断输入的点满不满足正方形的条件
-    }
-
-};
+void fun(Shape *ptr)
+{
+    ptr->getArea();
+}
+void fun2(Shape *ptr)
+{
+    ptr->getPerim();
+}
 int main()
 {
     Rectangle P;
     P.initRectangle(1,2,3,4);
-    P.getArea(P);
     Circle B;
     B.initCircle(1,2,3,4);
-    B.getArea(B);
-    Square C;
-    C.initSquare();
-    C.getArea(C);
-    cout << "Hello world!" << endl;
+    fun(&P);
+    fun(&B);
+    fun2(&P);
+    fun2(&B);
     return 0;
 }

@@ -12,6 +12,4 @@ private:
     string name;
     int age;
 };
-
-
 #endif // PERSON_H_INCLUDED

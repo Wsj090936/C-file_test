@@ -11,6 +11,4 @@ public:
 private:
     string Tno,Department,duty;
 };
-
-
 #endif // TEACHER_H_INCLUDED

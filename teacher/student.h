@@ -11,6 +11,4 @@ private:
     string Sno;
     int Grade;
 };
-
-
 #endif // STUDENT_H_INCLUDED

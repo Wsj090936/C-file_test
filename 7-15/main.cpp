@@ -9,7 +9,7 @@ int main()
 {
     Derived *pd = new Derived;
     pd->x = 1;pd->y = 2.0f;
-    void *pv = pd;
+    Derived *pv = pd;
     Base2 *pb = static_cast<Base2 *>(pv);
     cout<<pd->x<<" "<<pb->y<<endl;
     delete pb;

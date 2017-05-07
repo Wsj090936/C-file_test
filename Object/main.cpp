@@ -4,7 +4,7 @@ using namespace std;
 
 class Object{
 public:
-    void object(double weight)
+    Object(double weight)
     {
         this->weight = weight;
         cout<<"Constructing Object"<<endl;
@@ -17,9 +17,9 @@ private:
 
 class Box:public Object{
 public:
-    Box(double weight,double height,double width)
+    Box(double weight,double height,double width):Object(weight)
     {
-        object(weight);
+
         this->height = height;
         this->width = width;
         cout<<"Constructing Box"<<endl;
