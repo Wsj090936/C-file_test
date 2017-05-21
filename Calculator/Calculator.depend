@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1495295246 source:i:\codetest1\calculator\main.cpp
+	<iostream>
+	"RUN.h"
+
+1495295065 source:i:\codetest1\calculator\stack.h
+	<assert.h>
+
+1495334091 source:i:\codetest1\calculator\run.h
+	<ctype.h>
+	<iostream>
+	<stdlib.h>
+	"STACK.h"
+
+1495295065 i:\codetest1\calculator\stack.h
+	<assert.h>
+
+1495334278 i:\codetest1\calculator\run.h
+	<ctype.h>
+	<iostream>
+	<stdlib.h>
+	"STACK.h"
+
